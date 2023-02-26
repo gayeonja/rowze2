@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        body{
+            font-family: "Montserrat"; 
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #profile_pic{
+            text-align: center;
+            margin-top: 2%; 
+        }
+        .duck{
+            width: 40%; 
+        }
+        #user_name{
+            text-align: center;
+            justify-content: center;
+            margin-top: 20px; 
+        }
+        #take_picture{
+            padding-top: 12px;
+            padding-bottom: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #D5D4FF;
+            border-radius: 10px;
+            margin-bottom: 25px; 
+        }
+        #points{
+            margin-top: 20px; 
+            padding-top: 12px;
+            padding-bottom: 1px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #FEE3A2;
+            border-radius: 50px;
+            margin-bottom: 25px; 
+            font-size: 10px;
+        }
+        #big{
+            font-size: 25px;
+        }
+        #small{
+            font-size: 15px;
+        }
+    </style>
+    <title>ROWZE | Profile</title>
+</head>
+<body onload="displayName()">
+
+    <div class="row">
+        <div class="col-5"></div>
+        <div id="points" class="col-2 text-center">
+            
+        </div>
+        <div class="col-5"></div>
+    </div>
+
+    <div id="profile_pic" class="container">
+        <img class="duck" src="img/duck_profile.png" alt="duck"> 
+    </div>
+
+    <div class="text-center">
+        <div id="user_name" class="text-center">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3"></div>
+        <div id="take_picture" class="col-6 text-center">
+            
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <div class="text-center">
+        <div id="group_name" class="text-center">
+            <p id="small">group name</p>
+            <p id="big">THE OG CREW</p>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="theHome.html">
+          <img src="img/icon_home.png" width="60" height="60" alt="duck">
+        </a>
+        <a class="navbar-brand" href="leaderboard.html">
+            <img src="img/icon_trophy.png" width="60" height="60" alt="duck">
+        </a>
+        <a class="navbar-brand" href="profile.html">
+            <img src="img/icon_profile.png" width="60" height="60" alt="duck">
+        </a>
+    </nav>
+
+    <script>
+        function displayName(){
+            let name = localStorage.getItem('name'); 
+            let nameRow = document.createElement('p'); 
+            nameRow.innerHTML = name; 
+
+            document.querySelector('#user_name').appendChild(nameRow);
+
+            let username = localStorage.getItem('username'); 
+            let nameRow2 = document.createElement('p'); 
+            nameRow2.innerHTML = "@" + username; 
+
+            document.querySelector('#user_name').appendChild(nameRow2);
+
+            let status = localStorage.getItem('status');
+            let nameRow3 = document.createElement('p');  
+            nameRow3.innerHTML = status; 
+
+            document.querySelector('#take_picture').appendChild(nameRow3);
+
+            let points = localStorage.getItem('points');
+            let nameRow4 = document.createElement('p');  
+            nameRow4.innerHTML = points + " p"; 
+
+            document.querySelector('#points').appendChild(nameRow4);
+        }
+    </script>
+</body>
+</html>

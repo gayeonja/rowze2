@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        #everything{
+            padding-left: 5%; 
+            padding-right: 5%; 
+            background-color: white;
+        }
+        #title{
+            margin-bottom: 10%; 
+        }
+        #next{
+            font-size: 10px; 
+            margin-top: 15%; 
+        }
+        #time{
+            border-radius: 0%;
+            width: 50%; 
+            background-color: white; 
+            border: none; 
+            border-color: #000000; 
+            color: #000000; 
+            border-radius: 50px; 
+            font-size: 20px;   
+        }
+        #time:hover {
+            background-color: #F3C301; /* Green */
+            color: #ffffff;
+        }
+        h2{
+            font-size: 30px; 
+        }
+        p{
+            font-size: 20px; 
+        }
+        .log-in{
+            border-radius: 0%;
+            width: 50%; 
+            background-color: white; 
+            border: none; 
+            color: 87C159; 
+            border-radius: 20px; 
+            font-size: 20px; 
+        }
+        .log-in:hover {
+            background-color: #058240; /* Green */
+            color: white;
+        }
+        .next{
+            border-radius: 0%;
+            width: 30%; 
+            background-color: #FEE3A2; 
+            border: none; 
+            border-color: #000000; 
+            color: #000000; 
+            border-radius: 50px; 
+            font-size: 30px;  
+        }
+        .next:hover {
+            background-color: #F3C301; /* Green */
+            color: #ffffff;
+        }
+        .sub{
+            font-size: 12px;
+            margin-top: 1%; 
+        }
+        .buttons{
+            margin-bottom: 15%; 
+            margin-left: 25%; 
+            margin-right: 25%; 
+        }
+        .duck{
+            display: block;
+            margin-top: 0%;
+            margin-left: 0%;
+            width: 100%;
+            margin-bottom: 10%;
+        }
+        #goals{
+            margin-top: 15%; 
+        }
+        body{
+            background-color: #CAFBA3;
+            font-family: "Montserrat"; 
+        }
+        .sun{
+            width: 100%; 
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+    <title>ROWZE | Set Goals</title>
+</head>
+<body>
+    <div id="everything">
+        <div class="container">
+            <div id="title" class="row">
+                <div class="col-4">
+                    <img class="duck" src="img/duck_backwards.jpg" alt="duck"> 
+                </div>
+                <div id="goals" class="col-8">
+                    <h2 class="text-center">Let's set goals.</h2>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"><img class="sun" src="img/duck_beige_2.png" alt="moon"> </div>
+        <div class="col-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p class="text-center">Now, let’s set productive tasks that will help you reach your goals!</p>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <form id="signup-form" action="addgoals.html">
+        <div class="buttons form-group text-center row">
+            <div class="col-sm-10">
+                <button type="submit" value="submit" class="log-in">next ></button>
+            </div>
+        </div> 
+    </form>
+    <script type="text/javascript">
+        document.querySelector("#signup-form").onsubmit = function() {
+            let validForm = true;
+            return validForm;
+        }
+    </script> 
+</body>
+</html>

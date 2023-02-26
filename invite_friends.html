@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        body{
+            font-family: "Montserrat"; 
+        }
+        .duck{
+            display: block;
+            margin-top: 0%;
+            margin-left: 0%;
+            width: 100%;
+            margin-bottom: 10%;
+        }
+        .title{
+            margin-left: 5%; 
+            margin-right: 5%; 
+            margin-top: 5%; 
+        }
+        .friend{
+            margin-top: 13%; 
+        }
+        .log-in{
+            border-radius: 10%;
+            width: 100%; 
+            background-color: #87C159; 
+            border: none; 
+            border-color: #87C159; 
+            color: white; 
+            border-radius: 20px; 
+            font-size: 15px; 
+        }
+        .log-in:hover {
+            background-color: #058240; /* Green */
+            color: white;
+        }
+        .buttons{
+            margin-top: 5%; 
+        }
+        .buttons1{
+            margin-top: 1%; 
+        }
+        .hi2{
+            background-color: #D5D4FF;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 9px; 
+            padding-bottom: 1px; 
+        }
+        .hi{
+            margin-bottom: 10px; 
+        }
+        img{
+            margin-top: 10px; 
+            margin-bottom: 10px; 
+            width: 50px; 
+        }
+        .friends{
+            display: flex; 
+            flex-wrap: wrap; 
+        }
+        .third-line{
+            margin-left: 5%; 
+            text-align: center;
+        }
+        .rowsing{
+            margin-top: 5%; 
+        }
+        #or{
+            font-size: 25px;
+        }
+    </style>
+    <title>ROWZE | Invite Friends</title>
+</head>
+<body>
+    <div class="row title">
+        <div class="col-5">
+            <img class="duck" src="img/duck_sunglasses.png" alt="duck"> 
+        </div>
+        <div class="col-7 friend">
+            <h2>invite friends</h2>
+        </div>
+        <div class="col-12 text-center">
+            <p>friends make for “friendly” competition and hold each other accountable!</p>
+        </div>
+    </div>
+
+    <form id="signup-form" action="">
+        <div class="inputs container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <small id="username-error" class="form-text text-danger text-center"></small>
+                    <input type="text" name="username" class="form-control" placeholder="friend username" id="username">
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="buttons form-group text-center col-4">
+                    <button type="submit" value="submit" class="log-in">add</button>
+                </div> 
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+                <div id="friends" class="col-8">
+
+                </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div id="or" class="rowsing col-12">
+                <p>OR</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="rowsing col-12">
+                <p>Are you ready to start Rowsing?</p>
+            </div>
+        </div>
+        <div class="buttons1 text-center">
+            <button type="button" onclick="location.href='theHome.html';" class="log-in col-4">take me home</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#signup-form').onsubmit = function(){
+
+            const username = document.querySelector("#username").value.trim();
+
+            if ( username.length == 0 ){
+                document.querySelector("#username-error").innerHTML = `You must provide your friend's username.`;
+                return false; 
+            }
+
+            let img = document.createElement('img'); 
+            img.src = "img/duck_profile.png"; 
+
+            let rowDiv = document.createElement('div'); 
+            rowDiv.className = "hi"; 
+
+            let thisdiv = document.createElement('div'); 
+            thisdiv.className = "col-12 hi2"; 
+
+            let friend = document.createElement('p'); 
+            friend.innerHTML = username; 
+ 
+
+            thisdiv.appendChild(img); 
+            thisdiv.appendChild(friend); 
+            
+            rowDiv.appendChild(thisdiv); 
+            
+
+            document.querySelector('#friends').appendChild(rowDiv);
+
+            return false; 
+        }
+    </script>
+</body>
+</html>

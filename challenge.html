@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>ROWZE | Challenge</title>
+    <style>
+        body{
+            font-family: "Montserrat"; 
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #top{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            justify-content: center;
+            background-color: #FEE3A2;
+        }
+        .sun{
+            width: 70%; 
+        }
+        #good_morning{
+            padding-top: 20px; 
+            text-align: center;
+        }
+        #task{
+            margin-top: 20px; 
+        }
+        #take_picture{
+            padding-top: 12px;
+            padding-bottom: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #87C159;
+            border-radius: 10px;
+            margin-bottom: 25px; 
+        }
+        #time{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #FEE3A2;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px; 
+        }
+        #min3{
+            font-size: 25px;
+            color: #D75C04; 
+        }
+        .duck{
+            width: 90%; 
+        }
+        .log-in{
+            border-radius: 10%;
+            width: 100%; 
+            background-color: #87C159; 
+            border: none; 
+            border-color: #87C159; 
+            color: white; 
+            border-radius: 20px; 
+            font-size: 15px; 
+        }
+        .log-in:hover {
+            background-color: #058240;
+            color: white;
+        }
+        .last{
+            margin-bottom: 100px; 
+        }
+    </style>
+</head>
+<body onload="displayName()">
+    <div id="top" class="row">
+        <div class="col-2">
+            <img class="sun" src="img/sun.png" alt="sun"> 
+        </div>
+    </div>
+
+    <div id="good_morning">
+        <h2>good morning,</h2>
+    </div>
+
+    <div id="task" class="text-center">
+        <p>your task for today is: </p>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div id="take_picture" class="col-6 text-center">
+            <p>[take a picture of you brushing your teeth]</p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" id="time">
+                <div class="row text-center">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <p class="text-center">time left: </p>
+                        <p id="min3">3:45</p>
+                        <p class="text-center">Ready to Rowze?</p>
+                        <div class="">
+                            <img class="duck" src="img/duck_phone.png" alt="duck"> 
+                        </div>
+                        <div class="buttons1 text-center">
+                            <button type="button" onclick="location.href='posted.html';" class="log-in col-8">I'm Ready!</button>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <div class="row last">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <p>cchristy, amanda, rachel, and 3 more have Rowzed already</p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="theHome.html">
+          <img src="img/icon_home.png" width="60" height="60" alt="duck">
+        </a>
+        <a class="navbar-brand" href="leaderboard.html">
+            <img src="img/icon_trophy.png" width="60" height="60" alt="duck">
+        </a>
+        <a class="navbar-brand" href="profile.html">
+            <img src="img/icon_profile.png" width="60" height="60" alt="duck">
+        </a>
+    </nav>
+    <script>
+        function displayName(){
+            let name = localStorage.getItem('name'); 
+            let nameRow = document.createElement('h2'); 
+            nameRow.innerHTML = name + "!"; 
+            document.querySelector('#good_morning').appendChild(nameRow);
+        }
+    </script>
+</body>
+</html>

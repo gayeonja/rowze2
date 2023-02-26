@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>ROWZE | Welcome</title>
+    <style>
+        #everything{
+            margin-top: 10%; 
+            margin-left: 5%; 
+            margin-right: 5%; 
+        }
+        #title{
+            margin-bottom: 10%; 
+        }
+        h1{
+            color: #058240; 
+            font-size: 75px; 
+        }
+        h2{
+            font-size: 30px; 
+        }
+        p{
+            font-size: 20px; 
+        }
+        .log-in{
+            border-radius: 0%;
+            width: 75%; 
+            background-color: #87C159; 
+            border: none; 
+            border-color: #87C159; 
+            color: white; 
+            border-radius: 20px; 
+            font-size: 20px; 
+        }
+        .log-in:hover {
+            background-color: #058240; /* Green */
+            color: white;
+        }
+        .buttons{
+            margin-bottom: 10px; 
+        }
+        .feed_picture{
+            width: 100%; 
+            justify-content: center;
+        }
+        .duck{
+            display: block;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div id="everything">
+        <div id="title" class="col-12">
+            <h2 class="text-left">Welcome to</h2>
+            <h1 class="text-left">Rowze!</h1>
+            <p>Compete with friends to build better habits</p>
+        </div>
+
+        <div>
+            <img class="duck" src="img/duck_hi.jpg" alt="duck"> 
+        </div>
+        
+        <div class="buttons text-center">
+            <button type="button" onclick="location.href='home.html';" class="log-in" disabled>log in</button>
+        </div>
+        <div class="buttons text-center">
+            <button type="button" onclick="location.href='sign_up.html';" class="log-in">sign up</button>
+        </div>
+    </div>
+</body>
+</html>
